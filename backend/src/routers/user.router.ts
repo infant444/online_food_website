@@ -124,7 +124,7 @@ router.post("/change/profile/upload/:userid",asynceHandler(
     const genarateTockenResponse=(user:any)=>{
         const token=jwt.sign({
             id:user.id,email:user.email,isAdmin:user.isAdmin
-        },process.env.JWT_SECRET!,{
+        },"infant",{
            expiresIn:"60d"
         })
 
