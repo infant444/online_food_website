@@ -1,0 +1,47 @@
+.cont{
+  position: relative;
+  width: 35rem;
+  height: 22rem;
+  text-align: center;
+}
+.map{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.find_location{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  width: 14rem;
+  border: none;
+  font-size: 1.4rem;
+  background-color: rgba(255, 255, 255, 0.467);
+  letter-spacing: 2px;
+}
+
+.find_location:hover{
+  background-color: rgba(255, 255, 255, 0.785);
+}
+
+
+
+
+@media(max-width:609px){
+  .cont{
+  width: 25rem;
+  height: 12rem;
+  }
+}
+
+@media(max-width:445px){
+  .cont{
+  width: 20rem;
+  height: 12rem;
+  }
+}

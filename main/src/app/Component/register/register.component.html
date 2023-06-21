@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="content">
+    <app-title1 title="Register"></app-title1>
+    <form [formGroup]="Registerform" (ngSubmit)="submit()">
+
+
+      <input-container lable="name">
+           <div class="con" >
+              <input type="text" id="name" placeholder="Name"  formControlName="name">
+              <app-input-validation [control]="Fc.name" [showErrorsWhen]=" isSubmitted" class="error"></app-input-validation>
+
+           </div>
+    </input-container>
+
+
+      <input-container lable="Email" >
+           <div class="con" >
+              <input type="email" id="email" placeholder="Email"  formControlName="email">
+              <app-input-validation [control]="Fc.email" [showErrorsWhen]=" isSubmitted" class="error"></app-input-validation>
+
+           </div>
+    </input-container>
+
+
+
+    <input-container lable="Password" >
+    <div class="con">
+      <div class="x">
+      <input [type]="ptyp" id="password" placeholder="Password" formControlName="password">
+      <mat-icon (click)="pshow()">{{pico}}</mat-icon>
+      </div>
+      <app-input-validation [control]="Fc.password" [showErrorsWhen]=" isSubmitted" class="error"></app-input-validation>
+
+    </div>
+</input-container>
+
+
+<input-container lable="Confirm Password"  >
+<div class="con">
+  <div class="x">
+    <input [type]="cptyp" id="confirmPassword" placeholder="Confirm Password" formControlName="confirmPassword">
+    <mat-icon (click)="cpshow()">{{cpico}}</mat-icon>
+    </div>
+    <app-input-validation [control]="Fc.confirmPassword" [showErrorsWhen]="isSubmitted" class="error"></app-input-validation>
+
+</div>
+</input-container>
+
+<input-container lable="Address">
+<div class="con" >
+   <input type="text" id="Address" placeholder="Address"  formControlName="address">
+   <app-input-validation [control]="Fc.address" [showErrorsWhen]="isSubmitted" class="error"></app-input-validation>
+
+
+</div>
+</input-container>
+      <div class="button">
+        <button type="submit">sign Up</button>
+      </div>
+      <div class="login">
+        Already a user? &nbsp;
+        <a routerLink="/login" [queryParams]="{returnUrl: returnUrl}">Login Here</a>
+      </div>
+    </form>
+  </div>
+</div>
+

@@ -1,0 +1,23 @@
+div{
+  margin: 1rem;
+  display: flex;
+}
+p{
+  font-size: 1.4rem;
+  width: 200px;
+  margin: 1rem;
+  text-align: center;
+  padding: 1rem;
+  border: 2px solid #0ee48f;
+  border-radius: 3rem;
+  background-color: #0ee48e1d;
+  font-weight: 700;
+  color:  rgb(249, 54, 54);
+  cursor: pointer;
+}
+p:hover{
+  background-color: #0ee48f;
+  color: white;
+  border-color: white;
+  box-shadow: 2px 2px 10px 2px lightgray;
+}

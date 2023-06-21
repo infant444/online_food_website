@@ -1,0 +1,19 @@
+<div class="cont">
+  <div class="content">
+
+    <div>
+      <h2>Order#{{order.id}}</h2>
+    </div>
+    <div>
+      <app-order-user-detail [order]="order"></app-order-user-detail>
+    </div>
+    <div>
+      <order-item-list [order]="order"></order-item-list>
+    </div>
+
+  </div>
+  <div class="map">
+    <app-title1 title="Shipping Address"></app-title1>
+    <app-map [order]="order" [x]="true"></app-map>
+  </div>
+</div>

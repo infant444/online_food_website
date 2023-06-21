@@ -1,0 +1,46 @@
+<app-title1 title="Cart Page" class="title"></app-title1>
+<app-not-found *ngIf="!cart.count || !user.id" con="Cart is Empty" but="Back to home"></app-not-found>
+<div class="main" *ngIf="cart.count && user.id">
+  <div class="con">
+    <ul>
+      <li *ngFor="let x of cart.items" class="x">
+<div class="food">
+  <img [src]="x.food.imageurl" [alt]="x.food.name" class="img">
+  <div class="name"><a routerLink="/fooddetail/{{x.food.id}}">{{x.food.name}}</a></div>
+</div>
+<div class="foodqty">
+
+        <div class="qty">
+          <select name="qty" #qty [value]="x.quantity" (change)="changeQuantity(x,qty.value)">
+            <option value="0">0</option>
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+          </select>
+        </div>
+        <div class="price">
+          <p>{{x.food.price|currency:"INR"}}</p>
+        </div>
+        <div>
+          <button (click)=" RemoveFromCart(x)" class="remove"><span class="Remove">Remove</span><mat-icon>delete</mat-icon></button>
+        </div>
+</div>
+      </li>
+    </ul>
+  </div>
+  <div class="tot">
+    <div>
+      <div class="c"><p>Count: <span>{{cart.count}}</span></p>
+        </div>
+      <div class="t"><p>Total:<span>{{cart.totalPrice|currency:"INR"}}</span></p></div>
+    </div>
+    <div>
+      <button class="pay" (click)="process()">Process</button>
+    </div>
+  </div>
+</div>

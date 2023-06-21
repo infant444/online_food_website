@@ -1,0 +1,5 @@
+<ul class="main">
+  <li *ngFor="let x of tag" class="x">
+    <a routerLink="/tag/{{x.name}}">{{x.name}}<span>({{x.count}})</span></a>
+  </li>
+</ul>

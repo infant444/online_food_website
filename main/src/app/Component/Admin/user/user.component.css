@@ -1,0 +1,33 @@
+
+table{
+  width: 100%;
+  border: 2px solid lightgray ;
+}
+tr{
+  border-bottom: 2px solid lightgray;
+  padding: 2px;
+}
+td{
+  padding: 5px;
+}
+img{
+  width: 100px;
+  height: 100px;
+  border-radius: 200rem;
+}
+.delete{
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  border-radius: 4rem;
+  background-color: #ff1717;
+  color: white;
+  border: 2px solid white;
+  text-decoration: none;
+  text-align: center;
+  float: left;
+}
+mat-icon{
+  padding-top: 7px;
+  height: 1.8rem;
+}
+

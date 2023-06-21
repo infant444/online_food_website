@@ -1,0 +1,19 @@
+<header>
+  <div class="main">
+    <div class="title" (click)="home()">Food Delar</div>
+    <nav>
+      <ul [ngClass]="menuclass">
+        <li *ngIf="!user.id" (click)="login1()">Login</li>
+        <li class="x" *ngIf="user.id" (click)="dashbord()">{{user.name}}</li>
+        <li *ngIf="user.id" (click)="order()">Order</li>
+        <li *ngIf="user.isAdmin" (click)="info()">Information</li>
+        <li (click)="wishlist()" class="wish">wishlist<span *ngIf="Wishlist && user.id">&nbsp;</span></li>
+        <li (click)="cart()" class="cart">cart<span *ngIf="cartquenty && user.id">{{cartquenty}}</span></li>
+
+      </ul>
+    <mat-icon class="menu" (click)="change()" fontIcon="{{mantname}}"></mat-icon>
+
+    </nav>
+  </div>
+
+</header>

@@ -1,0 +1,5 @@
+
+<app-loading></app-loading>
+<app-header-fild></app-header-fild>
+<account-verify-alert *ngIf="!user.otp_verification && user.id"></account-verify-alert>
+<router-outlet></router-outlet>

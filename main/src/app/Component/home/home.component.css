@@ -1,0 +1,150 @@
+*{
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+}
+
+
+ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+ul li a img{
+  height: 200px;
+}
+ul li a{
+  color: #000;
+  height: 450px;
+  width: 300px;
+  border: 5px solid lightgray;
+  margin: 1rem;
+  border-radius: 1rem;
+  flex-direction: column;
+  display: flex;
+  overflow: hidden;
+  z-index: 4;
+}
+ul li a:hover{
+  opacity: 0.9;
+  transform: scale(1.01);
+}
+.name{
+  text-align: center;
+  color: rgb(14, 228, 143);
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin: 5px 0;
+}
+.fav{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+  margin-top: 20px;
+}
+.favarite{
+  color: red;
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  z-index: 12;
+}
+.favarite:hover{
+  transform: scale(1.03);
+}
+ .not
+{ color: rgb(160, 160, 160);}
+.star{
+  color: #FFD700;
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.fav p{
+  margin: 0;
+}
+.ratt{
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.orgin {
+  display: flex;
+}
+.orgin li{
+  margin: 5px;
+  font-size: .8rem;
+  padding: 3px 7px;
+  border-radius: 15px;
+  border: 2px solid rgb(14, 228, 143);
+  color: rgb(2, 122, 251);
+}
+.price{
+  margin: 10px;
+  font-size: 1.5rem;
+  color: rgb(14, 228, 143);
+  font-weight: bold;
+}
+
+
+@media(max-width:664px){
+  ul li a{
+    color: #000;
+    height: 350px;
+    width: 200px;
+    border: 5px solid lightgray;
+    margin: .5rem;
+  }
+  ul li a img{
+    height: 150px;
+  }
+  .name{
+    font-size: .9em;
+  }
+  .price{
+    font-size: .8em;
+  }
+  .star{
+    padding-top:4px ;
+  }
+  .favarite,.star,.ratt{
+    font-size: 1.2rem;
+  }
+
+  @media(max-width:426px){
+    ul{
+      justify-content:center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0;
+    }
+    ul li a{
+      color: #000;
+      height: 270px;
+      width: 150px;
+      border: 5px solid lightgray;
+      margin: .3rem;
+    }
+    ul li a img{
+      height: 100px;
+    }
+    .name{
+      font-size: .7em;
+    }
+    .price{
+      font-size: .6em;
+    }
+    .star{
+      padding-top:13px ;
+}
+    .favarite,.star,.ratt{
+      font-size: .8rem;
+    }
+    .orgin li{
+      font-size: .5rem;}
+
+  }
+}

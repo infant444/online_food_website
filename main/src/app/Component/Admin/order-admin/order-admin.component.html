@@ -1,0 +1,40 @@
+<app-content></app-content>
+<app-title1 title="Order list"></app-title1>
+<div class="con1">
+  <div class="search">
+    <form [formGroup]="dateform" class="form">
+      <input type="date"  formControlName="date"  (change)="submit()" [max]="formattedDate1">
+    </form>
+  </div>
+</div>
+<div>
+</div>
+<app-not-found con="no order is placed" but="back to home" *ngIf="!order.length"></app-not-found>
+<div class="con2" *ngIf="order.length">
+  <table>
+    <tr>
+      <th>Orderid</th>
+      <th>Order Status</th>
+      <th>Username</th>
+      <th>User Adderss</th>
+      <th>Amount</th>
+      <th>Payment Id</th>
+    </tr>
+    <tr *ngFor="let x of order">
+      <td><a routerLink="/track/{{x.id}}">#{{x.id}}</a></td>
+      <td><select [value]="x.status" #value (change)="changeStatus(value.value,x.id)">
+        <option value="NEW">NEW</option>
+        <option value="PAYED">PAYED</option>
+        <option value="SHIPPED">SHIPPED</option>
+        <option value="CANCELED">CANCELED</option>
+      </select></td>
+      <td><a routerLink="/user/feedback/"></a>{{x.name}}</td>
+      <td>{{x.address}}<br>
+      lat:{{x.addressLatLag?.lat}},lng:{{x.addressLatLag?.lng}}</td>
+      <td>{{x.totalPrice|currency:"INR"}}</td>
+      <td><span *ngIf="x.paymentId">{{x.paymentId}}</span>
+      <span *ngIf="!x.paymentId" style="color: red;">Not payment is done</span></td>
+    </tr>
+
+  </table>
+</div>

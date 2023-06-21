@@ -1,0 +1,139 @@
+*{
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+}
+
+.con{
+  width: 100%;
+}
+.content{
+  max-width:1240px;
+  min-width: 300px;
+  background-color:#ee2c56a9;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 1rem;
+  margin-top: .5rem;
+  border-radius: 2rem;
+}
+.main-con{
+  width: 98%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0ee48f;
+  border-radius: 3rem;
+}
+
+.profile{
+  width: 150px;
+  height: 150px;
+  position: relative;
+  margin-bottom: 20px;
+  margin-top:10px;
+  border-radius: 300rem;
+}
+.x{
+  position: absolute;
+  top: 80%;
+  right: 10%;
+  padding: .3rem;
+  border-radius: 200rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: #ffffff;
+}
+.pro{
+  width: 150px;
+  height: 150px;
+  border-radius: 300rem;
+  margin:0 auto;
+
+}
+
+.name{
+  font-size: 2rem;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: white;
+}
+.user_det{
+  width: 98%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3rem;
+  background-color: white;
+  padding: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+.user_det span{
+  font-weight: 400;
+  margin-left:20px ;
+}
+.user_det div{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.ver{
+  padding: 5px 1rem;
+  border-radius: 2rem;
+  background-color: #0ee48f;
+  color: #ffffff;
+}
+.ver:hover{
+  background-color: rgb(255, 0, 38);
+}
+.but{
+  display: flex;
+  justify-content:first baseline;
+  flex-wrap: wrap;
+}
+.but button{
+  padding: 10px;
+  margin: .4rem;
+  background-color: #0ee48f;
+  color: white;
+  border-radius: 2rem;
+}
+
+.but button:hover{
+  background-color: red;
+}
+@media(max-width:470px){
+  .pro{
+    width: 100px;
+    height: 100px;
+  }
+  .name{
+    font-size: 1rem;
+  }
+  .profile{
+    width: 100px;
+    height: 100px;
+  }
+  .x{
+    top: 75%;
+    right: 12%;
+    padding: .3rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  .user_det div{
+    display: block;
+    font-size: 1rem;
+  }
+  .user_det div span{
+    width: 100%;
+    font-size: 1rem;
+
+  }
+}

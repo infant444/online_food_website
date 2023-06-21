@@ -1,0 +1,24 @@
+<app-search></app-search>
+<app-tag></app-tag>
+<app-not-found *ngIf="!food.length" con="search food is not found" but="Reset search"></app-not-found>
+<ul *ngIf="food.length">
+  <li *ngFor="let x of food"><a routerLink="/fooddetail/{{x.id}}" class="main">
+    <img [src]="x.imageurl" [alt]="x.name">
+
+    <div class="content">
+      <div class="name">{{x.name}}</div>
+      <div class="fav">
+         <p><mat-icon fontIcon="favorite" class="favarite {{x.favirote?'': 'not'}}"></mat-icon></p>
+         <p class="ratt">{{x.rating}}<span><mat-icon fontIcon="star" class="star"></mat-icon></span></p>
+       </div>
+       <div class="orgin">
+        <li *ngFor="let y of x.orgins">
+          {{y}}
+        </li>
+       </div>
+       <div class="price">
+        {{x.price|currency:"INR"}}
+       </div>
+    </div>
+  </a></li>
+</ul>

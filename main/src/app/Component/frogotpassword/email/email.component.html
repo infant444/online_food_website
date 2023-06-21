@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="content">
+    <app-title1 title="Forgot Password"></app-title1>
+    <form [formGroup]="Mailform" (ngSubmit)="submit()">
+      <input-container lable="Email">
+           <div class="con" >
+              <input type="email" id="email" placeholder="Email"  formControlName="email">
+<app-input-validation [control]="Fc.email" [showErrorsWhen]="isSubmitted" class="error"></app-input-validation>
+           </div>
+           <div class="button">
+            <button type="submit">Verify</button>
+          </div>
+    </input-container>
+    </form>
+  </div></div>

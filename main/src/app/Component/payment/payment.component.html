@@ -1,0 +1,27 @@
+<div class="cont">
+  <div class="content">
+    <app-title1 title="Order summary"></app-title1>
+    <div class="order">
+      <div class="form">
+        <h3>Name:</h3>
+        <span>{{order.name}}</span>
+      </div>
+      <div class="form">
+        <h3>Address:</h3>
+        <span>{{order.address}}</span>
+      </div>
+
+    </div>
+    <order-item-list [order]="order"></order-item-list>
+  </div>
+
+  <div class="map">
+    <app-title1 title="Shipping Address"></app-title1>
+    <app-map [order]="order" [x]="true"></app-map>
+  </div>
+  <div class="button-con">
+    <div class="button">
+      <app-paypal [order]="order"></app-paypal>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+div{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+h3{
+  color: darkred;
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+button{
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  border-radius: 20px;
+  border-color:white ;
+  padding: 7px 10px;
+  opacity: .8;
+}
+button:hover{
+  opacity: 1;
+  transform: scale(1.02);
+}

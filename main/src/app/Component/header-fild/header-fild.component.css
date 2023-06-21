@@ -1,0 +1,126 @@
+*{
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+}
+
+header{
+  position: relative;
+  background: white;
+  padding: 0;
+  border-bottom: 2px solid red;
+  width: 100%;
+}
+li{
+  color: rgb(249, 54, 54);
+  cursor: pointer;
+  margin: .5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.main{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+nav .nav{
+  display: flex;
+  margin: 0 1rem;
+}
+
+ li:hover{
+  background-color: rgb(14, 228, 143);
+  color: white;
+  font-weight: 500;
+}
+.title{
+  font-weight: bold;
+  padding: 1rem;
+  margin: .5rem;
+  letter-spacing: 3px;
+  color:rgb(241, 55, 55);
+  cursor:pointer;
+}
+
+.cart span
+{
+  color: white;
+  background-color: red;
+  font-size: .9rem;
+  padding: .1rem .45rem;
+  margin-left: .2rem;
+  border-radius: 200rem;
+}
+
+
+.wish{
+  position: relative;
+}
+.wish span{
+  position: absolute;
+  width: .8rem;
+  height: .8rem;
+  border-radius: 400rem;
+  background-color: red;
+}
+.menu{
+display: none;
+}
+/* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);   hide
+clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); show */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:830px){
+.menu{
+  display: inline-block;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  font-size: 2rem;
+}
+
+.nav{
+  flex-direction: column;
+  position: absolute;
+  z-index: 102;
+  width: 97%;
+  top: 110%;
+  left: 0;
+  right: 0;
+  margin: 0;
+  background-color: rgba(151, 159, 151, 0.464);
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  border-radius: 2rem;
+}
+li{
+  width: 100%;
+  margin: 0;
+  border-bottom: 3px solid white;
+}
+.open{
+
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transition: linear 1s;
+  /* display: block; */
+}
+}

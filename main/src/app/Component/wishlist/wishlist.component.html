@@ -1,0 +1,15 @@
+<div>
+  <app-title1 title="WishList"></app-title1>
+<app-not-found *ngIf="!wish.length || !user.id" con="WishList is Empty" but="Back to home"></app-not-found>
+
+  <ul *ngIf="wish.length && user.id">
+    <li *ngFor="let x of wish">
+      <a routerLink="/fooddetail/{{x.food}}" class="main">
+        <img [src]="x.imageurl" [alt]="x.name">
+        <div class="content">
+          <div class="name">{{x.name}}</div>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>

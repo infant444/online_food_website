@@ -1,0 +1,35 @@
+<app-content></app-content>
+<div>
+  <table>
+    <tr>
+      <th>Profile</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Verification</th>
+      <th>Admin</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngFor="let x of user">
+      <td><img src="{{photo}}" alt="{{x.name}}" *ngIf="x.profile===' '">
+      <img src="{{x.profile}}" alt="{{x.name}}" *ngIf="x.profile!=' '"></td>
+      <td>{{x.name}}</td>
+      <td>{{x.email}}</td>
+      <td>{{x.address}}</td>
+      <td>
+        <p *ngIf="x.otp_verification"><span style="color:green"><mat-icon>check</mat-icon> Verifyed</span></p>
+        <p *ngIf="!x.otp_verification"><span style="color: red;"><mat-icon>cancel</mat-icon> Not Verifyed</span></p>
+      </td>
+      <td>
+        <p *ngIf="x.isAdmin"><span style="color:green">Admin</span></p>
+        <p *ngIf="!x.isAdmin"><span style="color: red;">Not a admin</span></p>
+      </td>
+      <td>
+        <a *ngIf="!x.isAdmin" routerLink="/deleteuser/{{x.id}}" class="delete">Delete</a>
+        <p *ngIf="x.isAdmin" style="color: red;">Not able to delete</p>
+      </td>
+    </tr>
+  </table>
+
+</div>
+

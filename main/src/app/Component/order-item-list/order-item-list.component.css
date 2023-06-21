@@ -1,0 +1,46 @@
+
+table{
+  width: 99%;
+  border: 1px solid #eeeeee;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+}
+h3{
+  margin-top: 0.5rem;
+  margin-left: .3rem;
+  color: gray;
+}
+.img{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 400rem;
+}
+td{
+  padding: 10px;
+}
+a:hover{
+opacity: .9;
+}
+.Total{
+  text-align: right;
+  padding-right: 2rem;
+}
+
+
+
+@media(max-width:603px){
+  .img{
+    width: 50px;
+    height: 50px;
+  }
+  td{
+    padding: 5px;
+    font-size: .7rem;
+  }
+  table{
+    width: auto;
+  }
+
+}

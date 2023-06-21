@@ -1,0 +1,170 @@
+*{
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+.main{
+  display: flex;
+  margin: 30px auto;
+  width: 1000px;
+  padding: 20px;
+  border: 5px solid lightgray;
+  border-radius: 20px;
+}
+.img img{
+  width: 500px;
+  height: 350px;
+  border-radius: 20px;
+}
+.container{
+  width: 450px;
+  margin-left: 50px;
+}
+.name{
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgb(14, 228, 143);
+}
+.fav{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+  margin-top: 20px;
+}
+.favarite{
+  color: red;
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+ .not
+{ color: rgb(160, 160, 160);}
+.star{
+  color: #FFD700;
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.fav p{
+  margin: 0;
+}
+.ratt{
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.orgin,.tag {
+  display: flex;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+.orgin li{
+  margin: 5px;
+  font-size: 1rem;
+  padding: 3px 7px;
+  border-radius: 15px;
+  border: 2px solid rgb(14, 228, 143);
+  color: rgb(2, 122, 251);
+}
+.tag li{
+  margin-top: 10px;
+}
+.tag li a{
+  margin: 5px;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: 2px solid rgb(14, 228, 143);
+  color: rgb(244, 37, 85);
+  background-color: lightgrey;
+}
+.tag li a:hover{
+  background-color: rgb(14, 228, 143);
+  color: white;
+}
+.price{
+  margin-top: 20px;
+}
+.price p{
+  margin: 10px;
+  font-size: 1.5rem;
+}
+.price p span{
+  margin: 10px;
+  font-size: 1.7rem;
+  color: rgb(14, 228, 143);
+  font-weight: bold;
+}
+.cart button{
+  width: 100%;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: .3rem;
+  border-radius: 30px;
+  color: white;
+  background-color: rgb(234, 20, 20);
+  letter-spacing: 2px;
+}
+.cart button:hover{
+ background-color: rgb(14, 228, 143);;
+}
+
+
+
+
+
+
+
+
+
+@media(max-width:1000px){
+  .img img{
+    width: 400px;
+    height: 250px;
+    border-radius: 20px;
+  }
+  .main{
+    width: 750px;
+  }
+  .container{
+    width: 300px;
+    margin-left: 30px;
+  }
+}
+
+
+@media(max-width:744px){
+  .main{
+    width: 450px;
+    display: block;
+  }
+  .container{
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+
+@media(max-width:444px){
+  .img img{
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+  }
+  .main{
+    width: 100%;
+    display: block;
+  }
+}
+@media(max-width:444px){
+  .img img{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+  }
+}

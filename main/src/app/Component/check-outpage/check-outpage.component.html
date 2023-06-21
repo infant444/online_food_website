@@ -1,0 +1,30 @@
+<div class="cont">
+  <div class="content">
+    <app-title1 title="Order Form"></app-title1>
+    <form [formGroup]="checkOutForm">
+      <input-container lable="Name">
+        <div class="con">
+          <input type="name" id="name" placeholder="name" formControlName="name">
+          <app-input-validation [control]="Fc.name" [showErrorsWhen]=true class="error"></app-input-validation>
+        </div>
+      </input-container>
+      <input-container lable="Address">
+        <div class="con">
+          <input type="name" id="Address" placeholder="Address" formControlName="address">
+          <app-input-validation [control]="Fc.address" [showErrorsWhen]=true class="error"></app-input-validation>
+        </div>
+      </input-container>
+    </form>
+    <order-item-list [order]="order"></order-item-list>
+  </div>
+
+  <div class="map">
+    <app-title1 title="Choose Your Address on Map"></app-title1>
+    <app-map [order]="order"></app-map>
+  </div>
+  <div class="button-con">
+    <div class="button">
+      <button (click)="createOrder()">Go To Payment</button>
+    </div>
+  </div>
+</div>

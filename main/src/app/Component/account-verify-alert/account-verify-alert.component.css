@@ -1,0 +1,19 @@
+.con{
+  width: 100%;
+  margin: 0;
+  background-color: rgba(247, 50, 50, 0.414);
+}
+p{
+  padding: 1rem;
+  text-align: center;
+  color: white;
+}
+span{
+  margin-left: 20px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+span:hover{
+  color: aquamarine;
+}
+

@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="content">
+    <app-title1 title="loginform"></app-title1>
+    <form [formGroup]="feedbackform" (ngSubmit)="submit()">
+      <input-container lable="Name">
+           <div class="con" >
+              <input type="text" id="name" placeholder="Name"  formControlName="name">
+<app-input-validation [control]="Fc.name" [showErrorsWhen]="issubmitted" class="error"></app-input-validation>
+           </div>
+    </input-container>
+      <input-container lable="Email">
+           <div class="con" >
+              <input type="email" id="email" placeholder="Email"  formControlName="email">
+<app-input-validation [control]="Fc.email" [showErrorsWhen]="issubmitted" class="error"></app-input-validation>
+           </div>
+    </input-container>
+    <input-container lable="Rating">
+           <div class="con" >
+            <select formControlName="rating" placeholder="Rating" [value]="x">
+              <option value="EXCLLENT" style="background-color: rgb(21, 255, 0);">Excllent</option>
+              <option value="VERY_GOOD" style="background-color: rgba(0, 255, 26, 0.642);">Very Good</option>
+              <option value="GOOD" style="background-color: rgba(185, 213, 2, 0.658);">Good</option>
+              <option value="POOR" style="background-color: rgba(255, 0, 0, 0.459);">Poor</option>
+              <option value="VERY_POOR" style="background-color: red;">Very Poor</option>
+
+
+            </select>
+<app-input-validation [control]="Fc.rating" [showErrorsWhen]="issubmitted" class="error"></app-input-validation>
+           </div>
+    </input-container>
+    <input-container lable="Email">
+           <div class="con" >
+              <textarea id="email" placeholder="Enter the issue"  formControlName="issue" rows="10"></textarea>
+<app-input-validation [control]="Fc.issue" [showErrorsWhen]="issubmitted" class="error"></app-input-validation>
+           </div>
+    </input-container>
+    <div class="button">
+      <button type="submit">Send Feedback</button>
+    </div>
+    </form>
+    </div>
+    </div>

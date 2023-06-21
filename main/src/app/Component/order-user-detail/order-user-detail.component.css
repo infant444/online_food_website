@@ -1,0 +1,19 @@
+table{
+  width: 99%;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+}
+td,th{
+  padding: 10px;
+}
+@media(max-width:603px){
+  table{
+    width: auto;
+  }
+}
+
+@media (max-width:432px) {*{
+  font-size: .8rem;
+}
+
+}

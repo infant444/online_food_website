@@ -1,0 +1,62 @@
+<div class="con">
+  <div class="content">
+    <div class="main-con">
+
+      <div class="profile">
+        <img src="{{photo}}" alt="{{user.name}}" class="pro">
+        <mat-icon class="x">edit</mat-icon>
+      </div>
+
+
+      <div class="name">
+        {{user.name}}
+      </div>
+    </div>
+    <div class="user_det">
+      <div>
+       <p>mail:
+        <span>{{user.email}}</span></p>
+        <button *ngIf="!user.otp_verification" class="ver" (click)="verfi()">verify</button>
+      </div>
+      <div *ngIf="user.phono">
+        <p>Phone no:
+         <span>{{user.phono}}</span></p>
+         <button class="ver">verify</button>
+       </div>
+      <div>
+       <p>
+        Address
+        <Span>{{user.address}}</Span>
+       </p>
+      </div>
+    </div>
+    <div class="but">
+      <button (click)="edit()">Edit profile</button>
+      <button (click)="feedback()">Send Feedback</button>
+      <button (click)="changepassword()">Change Password</button>
+      <button (click)="logout()">Logout</button>
+      <button (click)="Delete()">Deactivate Account</button>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+  <!-- <app-profile></app-profile> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

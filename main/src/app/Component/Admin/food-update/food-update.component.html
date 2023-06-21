@@ -1,0 +1,164 @@
+<div class="contx">
+ <div class="foodedit">
+    <app-title1 title="Update the Food "></app-title1>
+
+
+
+
+    <div class="content">
+      <form [formGroup]="nameform" (ngSubmit)="submit1()">
+        <input-container lable="Name">
+             <div class="con" >
+                <input type="text" id="name" placeholder="chicken fry"  formControlName="name">
+  <app-input-validation [control]="Fc1.name" [showErrorsWhen]="isSubmitted1" class="error"></app-input-validation>
+             </div>
+      </input-container>
+      <div class="button">
+        <button type="submit"><mat-icon>create</mat-icon>Edit</button>
+      </div>
+      </form>
+    </div>
+
+
+
+    <div class="content">
+      <form [formGroup]="imageform" (ngSubmit)="submit2()">
+        <input-container lable="Image Url">
+        <div class="con" >
+          <div class="fooddiv">
+            <div class="fooddiv1">
+              <h5>Upload Image</h5>
+              <p>PNG,JPG,and JPEG file are allowed</p>
+            </div>
+            <div class="fooddiv2">
+              <label  for="imageurl">
+                <mat-icon class="uploadimg">cloud_upload</mat-icon>
+              </label>
+              <p *ngIf="!foodimgpath">Browse to choose the file </p>
+              <p *ngIf="foodimgpath"><mat-icon style="font-size: 24px;padding: 0;color: lawngreen;">check</mat-icon>Uploaded</p>
+            </div>
+          </div>
+          <input type="file" id="imageurl" placeholder="../../../assets/images/food/" accept=".png,.jpeg,.jpg"
+            formControlName="imageurl" (change)="onFileSelected($event) ">
+          <app-input-validation [control]="Fc2.imageurl" [showErrorsWhen]="isSubmitted2" class="error"></app-input-validation>
+        </div>
+    </input-container>
+    <div class="button">
+      <button type="submit"><mat-icon>create</mat-icon>Edit</button>
+    </div>
+      </form>
+    </div>
+
+
+
+
+
+    <!-- <div class="content">
+      <form [formGroup]="tagform" (ngSubmit)="submit3()">
+        <input-container lable="Tag">
+      <div class="con" >
+         <input type="tag" id="tag" placeholder="chicken,fry,spicy"  formControlName="tags">
+      <app-input-validation [control]="Fc3.tags" [showErrorsWhen]="isSubmitted3" class="error"></app-input-validation>
+      </div>
+      </input-container>
+      <div class="button">
+        <button type="submit"><mat-icon>create</mat-icon>Edit</button>
+      </div>
+      </form>
+    </div> -->
+
+
+
+
+
+
+    <div class="content">
+      <form [formGroup]="ratingform" (ngSubmit)="submit4()">
+        <input-container lable="Rating">
+      <div class="con" >
+         <input type="rating" id="rating" placeholder="4.5"  formControlName="rating">
+      <app-input-validation [control]="Fc4.rating" [showErrorsWhen]="isSubmitted4" class="error"></app-input-validation>
+      </div>
+      </input-container>
+      <div class="button">
+        <button type="submit"><mat-icon>create</mat-icon>Edit</button>
+      </div>
+      </form>
+    </div>
+
+
+
+
+
+
+    <!-- <div class="content">
+      <form [formGroup]="orginsform" (ngSubmit)="submit5()">
+        <input-container lable="Orgins">
+      <div class="con" >
+         <input type="text" id="orgins" placeholder="chiness,dinner"  formControlName="orgins">
+      <app-input-validation [control]="Fc5.orgins" [showErrorsWhen]="isSubmitted5" class="error"></app-input-validation>
+      </div>
+      </input-container>
+      <div class="button">
+        <button type="submit"><mat-icon>create</mat-icon>Edit</button>
+      </div>
+      </form>
+    </div> -->
+
+
+
+
+
+  <div class="content">
+<form [formGroup]="priceform" (ngSubmit)="submit6()">
+  <input-container lable="Price">
+<div class="con" >
+   <input type="text" id="price" placeholder="540"  formControlName="price">
+<app-input-validation [control]="Fc6.price" [showErrorsWhen]="isSubmitted6" class="error"></app-input-validation>
+</div>
+</input-container>
+<div class="button">
+  <button type="submit"><mat-icon>create</mat-icon>Edit</button>
+</div>
+</form>
+  </div>
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="fooddetail">
+        <div>
+          <img [src]="food.imageurl" class="img">
+        </div>
+          <div>
+            <p>Name : <span>{{food.name}}</span></p>
+            <p>Starrating:<span>{{food.rating}}<mat-icon>star</mat-icon> </span></p>
+            <p>Tags :<span >{{food.tag}}</span></p>
+            <p>orgins :<span>{{food.orgins}}</span></p>
+            <p>Price: <span>{{food.price}}</span></p>
+          </div>
+        </div>
+</div>

@@ -1,0 +1,29 @@
+<app-not-found *ngIf="!food" con="food not found" but="back to home page"></app-not-found>
+<div class="main" *ngIf="food">
+  <div class="img">
+    <img [src]="food.imageurl" [alt]="food.name">
+  </div>
+  <div class="container">
+    <div class="name">{{food.name}}</div>
+    <div class="fav">
+      <p><mat-icon fontIcon="favorite" class="favarite {{food.favirote?'': 'not'}}" (click)="change(food)"></mat-icon></p>
+      <p class="ratt">{{food.rating}}<span><mat-icon fontIcon="star" class="star"></mat-icon></span></p>
+    </div>
+    <div class="orgin">
+     <li *ngFor="let y of food.orgins">
+       {{y}}
+     </li>
+    </div>
+    <div class="tag">
+      <li *ngFor="let x of food.tag">
+        <a routerLink="/tag/{{x}}">{{x}}</a>
+      </li>
+    </div>
+    <div class="price">
+     <p>price<span>{{food.price|currency:"INR"}}</span></p>
+    </div>
+    <div class="cart">
+      <button (click)="addToCart()">cart</button>
+    </div>
+  </div>
+</div>

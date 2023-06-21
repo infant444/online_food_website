@@ -1,0 +1,55 @@
+.main{
+  width: 100%;
+  /* overflow:hidden; */
+}
+.img{
+  width: 100px;
+  height: 100px;
+  border-radius: 200rem;
+}
+p{
+  font: 1.5rem sans-serif;
+  color: #0ee48f;
+  font-weight: 500;
+}
+
+
+table{
+  width: 100%;
+  border: 2px solid lightgray ;
+}
+tr{
+  border-bottom: 2px solid lightgray;
+}
+.button{
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+}
+.edit,.delete{
+  padding: .4rem;
+  font-size: 1.2rem;
+  border-radius: 4rem;
+  background-color: #0ee48f;
+  color: white;
+  border: 2px solid white;
+  text-decoration: none;
+  text-align: center;
+  line-height: 5px;
+}
+.delete{
+  background-color: red;
+}
+
+.add{
+  padding: 1rem;
+  background-color: #0ee48f;
+  color: white;
+  border: 2px solid white;
+  border-radius: 2rem;
+  margin-right: 1rem;
+}
+
+
+
+

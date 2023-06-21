@@ -1,0 +1,34 @@
+<app-content></app-content>
+
+<div class="main">
+      <table>
+        <tr>
+          <td colspan="8" align="right">
+
+              <button class="add" (click)="add()"><mat-icon class="addicon">add</mat-icon> Add Food</button>
+          </td>
+        </tr>
+        <tr>
+          <th>Food Image</th>
+          <th>Food Name</th>
+          <th>Tag</th>
+          <th>Orgins</th>
+          <th>Rating</th>
+          <th>Price</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+        <tr *ngFor="let x of food">
+          <td><img src="{{x.imageurl}}" class="img"></td>
+          <td>{{x.name}}</td>
+          <td>{{x.tag}}</td>
+          <td>{{x.orgins}}</td>
+          <td>{{x.rating}}</td>
+          <td>{{x.price|currency:'INR'}}</td>
+          <td> <a routerLink="/foodupdate/{{x.id}}" class="edit"><mat-icon>edit</mat-icon></a></td>
+
+          <td><a routerLink="/fooddelete/{{x.id}}" class="delete"><mat-icon>delete</mat-icon></a></td>
+        </tr>
+      </table>
+</div>
+

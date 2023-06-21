@@ -1,0 +1,66 @@
+<div class="contx">
+  <div class="content">
+    <app-title1 title="Add the Food "></app-title1>
+    <form [formGroup]="foodForm" (ngSubmit)="submit()">
+      <input-container lable="Name">
+        <div class="con">
+          <input type="text" id="name" placeholder="chicken fry" formControlName="name">
+          <app-input-validation [control]="Fc.name" [showErrorsWhen]="isSubmitted" class="error"></app-input-validation>
+        </div>
+      </input-container>
+
+      <input-container lable="Upload food">
+        <div class="con">
+          <div class="fooddiv">
+            <div class="fooddiv1">
+              <h5>Upload Image</h5>
+              <p>PNG,JPG,and JPEG file are allowed</p>
+            </div>
+            <div class="fooddiv2">
+              <label  for="imageurl">
+                <mat-icon class="uploadimg">cloud_upload</mat-icon>
+              </label>
+              <p *ngIf="!foodimgpath">Browse to choose the file </p>
+              <p *ngIf="foodimgpath"><mat-icon style="font-size: 24px;padding: 0;color: lawngreen;">check</mat-icon>Uploaded</p>
+            </div>
+          </div>
+          <input type="file" id="imageurl" placeholder="../../../assets/images/food/" accept=".png,.jpeg,.jpg"
+            formControlName="imageurl" (change)="onFileSelected($event) ">
+          <app-input-validation [control]="Fc.imageurl" [showErrorsWhen]="isSubmitted" class="error"></app-input-validation>
+        </div>
+      </input-container>
+
+      <input-container lable="Tag">
+        <div class="con">
+          <input type="tag" id="tag" placeholder="chicken,fry,spicy" formControlName="tags">
+          <app-input-validation [control]="Fc.tags" [showErrorsWhen]="isSubmitted" class="error"></app-input-validation>
+        </div>
+      </input-container>
+      <input-container lable="Rating">
+        <div class="con">
+          <input type="rating" id="rating" placeholder="4.5" formControlName="rating">
+          <app-input-validation [control]="Fc.rating" [showErrorsWhen]="isSubmitted"
+            class="error"></app-input-validation>
+        </div>
+      </input-container>
+      <input-container lable="Orgins">
+        <div class="con">
+          <input type="text" id="orgins" placeholder="chiness,dinner" formControlName="orgins">
+          <app-input-validation [control]="Fc.orgins" [showErrorsWhen]="isSubmitted"
+            class="error"></app-input-validation>
+        </div>
+      </input-container>
+      <input-container lable="Price">
+        <div class="con">
+          <input type="text" id="price" placeholder="540" formControlName="price">
+          <app-input-validation [control]="Fc.price" [showErrorsWhen]="isSubmitted"
+            class="error"></app-input-validation>
+        </div>
+      </input-container>
+
+      <div class="button">
+        <button type="submit">ADD</button>
+      </div>
+    </form>
+  </div>
+</div>

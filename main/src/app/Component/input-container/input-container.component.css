@@ -1,0 +1,25 @@
+.container{
+  position: relative;
+  margin-bottom: .5rem;
+  border-radius: 1rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 2px solid lightgray;
+}
+.container:hover{
+  background-color: lemonchiffon;
+}
+label{
+  display: inline-block;
+  margin-left: .5rem;
+  color:gray;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.content{
+  padding: 0 0.5rem;
+  height: 3.7rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: .5rem;
+}

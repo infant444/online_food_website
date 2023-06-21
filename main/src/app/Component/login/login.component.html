@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="content">
+    <app-title1 title="loginform"></app-title1>
+    <form [formGroup]="loginform" (ngSubmit)="submit()">
+      <input-container lable="Email">
+           <div class="con" >
+              <input type="email" id="email" placeholder="Email"  formControlName="email">
+<app-input-validation [control]="Fc.email" [showErrorsWhen]="isSubmitted" class="error"></app-input-validation>
+           </div>
+    </input-container>
+    <input-container lable="Password">
+    <div class="con">
+      <div class="x">
+      <input [type]="ptyp" id="password" placeholder="Password" formControlName="password">
+        <mat-icon (click)="pshow()">{{pico}}</mat-icon>
+        </div>
+      <app-input-validation [control]="Fc.password" [showErrorsWhen]="isSubmitted" class="error"></app-input-validation>
+    </div>
+    <div><a routerLink="/user/forgot/password/email">forgot password</a></div>
+
+</input-container>
+<input-container lable="Verify user">
+<div  class="captcha">
+<ngx-recaptcha2 #captchaElem [siteKey]="siteKey" [useGlobalDomain]="false" formControlName="recaptcha"> </ngx-recaptcha2>
+
+</div></input-container>
+      <div class="button">
+        <button type="submit">Login</button>
+      </div>
+      <div class="register">
+        New user? &nbsp;
+        <a routerLink="/register" [queryParams]="{returnUrl: returnUrl}">Sign Up Here</a>
+      </div>
+    </form>
+  </div>
+</div>

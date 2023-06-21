@@ -1,0 +1,29 @@
+.con1{
+  width: 100%;
+}
+.search{
+  width: 300px;
+  margin: 1rem auto .5rem;
+
+}
+input[type="date"]{
+  font-size: 2rem;
+  width: 300px;
+  margin: 1rem 0.5rem;
+  border-radius: 2rem;
+  padding: .5rem;
+}
+a{
+  color: #000;
+  text-decoration: none;
+}
+table{
+  width: 100%;
+}
+tr{
+  border-bottom: 2px solid lightgray;
+  padding: 2px;
+}
+td{
+  padding: 5px;
+}

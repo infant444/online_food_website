@@ -1,0 +1,161 @@
+*{
+  list-style: none;
+  text-decoration: none;
+
+  box-sizing: border-box;
+  color: #000;
+}
+.main{
+  display: flex;
+}
+.con{
+  width: 70%;
+  margin-top: 20px;
+  border: 5px solid rgb(162, 160, 160);
+  border-radius: 10px;
+}
+.con ul{
+  width: 100%;
+}
+.con ul li{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid lightgray;
+  margin-left: 0;
+  opacity: .9;
+  position: relative;
+}
+.foodqty{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+li:hover{
+  opacity: 1;
+  transform: scale(1.01);
+}
+.qty select{
+  width: 50px;
+  font-weight: 500px;
+}
+.food{
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+.food img{
+  margin: 20px;
+}
+.food div{
+  margin-top: 3.5rem;
+}
+.tot{
+  width: 28%;
+  height: 300px;
+  margin: 5px;
+  margin-top: 20px;
+  justify-content: right;
+  border: 5px solid rgb(162, 160, 160);
+  border-radius: 10px;
+  font-size: 2rem;
+  padding-top: 50px;
+  padding-left: 20px;
+  color: lightgray;
+}
+.img{
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.remove{
+  font-size: 1.2rem;
+  color: white;
+  background-color: rgb(179, 20, 20);
+  margin-right: 20px;
+  border-radius: 5px;
+  padding: 5px 7px;
+  cursor: pointer;
+  align-items: center;
+}
+.remove:hover{
+background-color: rgb(14, 228, 143);;
+}
+.name a{
+  font-weight: 2rem;
+  color: #000;
+}
+.name , .qty,.price,.remove{
+  margin-top: 40px;
+}
+.remove span,.remove mat-icon{
+  color: white;
+}
+.c,.t{
+  margin: 10px;
+}
+.c span{
+  color: #000;
+}
+.t span{
+  color: rgb(252, 31, 31);
+}
+.pay{
+  width: 90%;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(253, 31, 31);
+  padding: 5px 10px;
+  border-radius: 10px;
+  border-color: transparent;
+}
+.pay:hover{
+  background-color:  rgb(14, 228, 143);
+}
+mat-icon{
+  display: none;
+}
+
+
+
+@media(max-width:887px){
+  .main{
+    display: block;
+  }
+  .con{
+    width: 100%;
+  }
+  .tot{
+    width:100%;
+  }
+
+}
+@media(max-width:639px){
+  .remove span{
+    display: none;
+  }
+  .remove mat-icon{
+    display: block;
+  }
+  .con ul li{
+    flex-direction: column;
+  }
+  .foodqty{
+    width: 100%;
+  }
+  .food{
+    width: 50%;
+
+  }
+}
+@media(max-width:509x){
+  .food{
+    width: 100%;
+
+  }
+}

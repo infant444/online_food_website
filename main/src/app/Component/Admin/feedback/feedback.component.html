@@ -1,0 +1,30 @@
+<app-content></app-content>
+<app-title1 title="Feedback list"></app-title1>
+<div class="con1">
+  <div class="search">
+    <form [formGroup]="dateform" class="form">
+      <input type="date"  formControlName="date" (change)="submit()"   [max]="formattedDate1">
+    </form>
+  </div>
+</div>
+<div>
+</div>
+<app-not-found con="no order is placed" but="back to home" *ngIf="!feedback.length"></app-not-found>
+<div class="con2" *ngIf="feedback.length">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Rating</th>
+      <th>Issue</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngFor="let x of feedback">
+      <td>{{x.name}}</td>
+      <td>{{x.email}}</td>
+      <td>{{x.rating}}</td>
+      <td>{{x.issue}}</td>
+      <td style="color: red; font-weight: 500; cursor: pointer;" (click)="delete(x.id)">Delete</td>
+    </tr>
+  </table>
+</div>
