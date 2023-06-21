@@ -3,7 +3,7 @@ import{connect, ConnectOptions} from 'mongoose';
 
 
 export const dbconnect=()=>{
-    connect(process.env.MONGO_URL!,{
+    connect("mongodb+srv://Infant:Adhijoe75@cluster0.fom5pd8.mongodb.net/fooddelar?retryWrites=true&w=majority",{
         useNewUrlParser:true,
         useUnifiedTopology:true
     } as ConnectOptions).then(
