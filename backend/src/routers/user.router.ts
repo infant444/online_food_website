@@ -216,7 +216,7 @@ router.post("/change/profile/upload/:userid",asynceHandler(
             theme:"default",
             product:{
                 name:'<h2 style=" width:100%;height:100%;background-color:rgb(14, 228, 143);color:white;font: 2rem sans-serif;font-weight: 800;text-align: center; padding:2.5rem; margin:0">Food Delar</h2>',
-                link:"http://localhost:4200/",
+                link:"https://siwmato.onrender.com",
             },
         })
         let response={
@@ -229,7 +229,7 @@ router.post("/change/profile/upload/:userid",asynceHandler(
                     button: {
                       color: '#22BC66',
                       text: 'Verify Email',
-                      link: 'http://localhost:4200/user/forgot/password/'+token,
+                      link: 'https://siwmato.onrender.com/user/forgot/password/'+token,
                     },
                   },
                 outro: 'Need help, or have questions? Just reply to this email, we\'d love to help.'
@@ -302,7 +302,7 @@ router.post("/change/profile/upload/:userid",asynceHandler(
             theme:"default",
             product:{
                 name:'<h2 style=" width:100%;height:100%;background-color:rgb(14, 228, 143);color:white;font: 2rem sans-serif;font-weight: 800;text-align: center; padding:2.5rem; margin:0">Food Delar</h2>',
-                link:"http://localhost:4200/",
+                link:"https://siwmato.onrender.com",
             },
         })
         let response={
@@ -315,7 +315,7 @@ router.post("/change/profile/upload/:userid",asynceHandler(
                     button: {
                       color: '#22BC66',
                       text: 'Verify Email',
-                      link: 'http://localhost:4200/email/verify/'+token,
+                      link: 'https://siwmato.onrender.com/email/verify/'+token,
                     },
                   },
                 outro: 'Need help, or have questions? Just reply to this email, we\'d love to help.'
@@ -347,7 +347,7 @@ const generateverificationtocken=(user:any)=>{
     console.log(user);
     const token=jwt.sign({
         id:user.id,email:user.email
-    },process.env.JWT_EMAIL_VERIFICATION!,{
+    },"infant@04Raj&3",{
        expiresIn:"12h"
     })
     console.log(token);
@@ -380,7 +380,7 @@ const verifyuserTocken=(token:string)=>{
         return;
     }
     try{
-        const decoderedUser=jwt.verify(token,process.env.JWT_EMAIL_VERIFICATION!);
+        const decoderedUser=jwt.verify(token,"infant@04Raj&3");
         console.log(decoderedUser);
         const x:any=decoderedUser;
         console.log(x.email);
