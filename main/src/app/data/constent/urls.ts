@@ -1,4 +1,4 @@
-import { environment } from "src/environment/environment";
+import { environment } from "src/environment/environment.pord";
 
 const BASE_URL=environment.production?'':'http://localhost:5000';
 
