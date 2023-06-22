@@ -124,7 +124,7 @@ router.post("/change/profile/upload/:userid",asynceHandler(
     const genarateTockenResponse=(user:any)=>{
         const token=jwt.sign({
             id:user.id,email:user.email,isAdmin:user.isAdmin
-        },"infant",{
+        },process.env.JWT_SECRET!,{
            expiresIn:"60d"
         })
 
@@ -347,7 +347,7 @@ const generateverificationtocken=(user:any)=>{
     console.log(user);
     const token=jwt.sign({
         id:user.id,email:user.email
-    },"infant@04Raj&3",{
+    },process.env.JWT_EMAIL_VERIFICATION!,{
        expiresIn:"12h"
     })
     console.log(token);
@@ -380,7 +380,7 @@ const verifyuserTocken=(token:string)=>{
         return;
     }
     try{
-        const decoderedUser=jwt.verify(token,"infant@04Raj&3");
+        const decoderedUser=jwt.verify(token,process.env.JWT_EMAIL_VERIFICATION!);
         console.log(decoderedUser);
         const x:any=decoderedUser;
         console.log(x.email);

@@ -10,7 +10,7 @@ export default(req:any,res:any,next:any)=>{
     }
 
     try{
-        const decoderedUser=verify(token,"infant");
+        const decoderedUser=verify(token,process.env.JWT_SECRET!);
         // console.log(decoderedUser);
         req.user=decoderedUser;
     }catch(error){
