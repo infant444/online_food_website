@@ -32,6 +32,7 @@ router.post("/login",asynceHandler(
    async (req,res)=>{
         const {email,password}=req.body;
         console.log(email,password);
+        
         const user=await UserModel.findOne({email});
         
         if(user && (await bcrypt.compare(password, user.password)))

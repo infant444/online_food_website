@@ -155,6 +155,8 @@ return this.http.get<User[]>(SEE_USER_FEEDBACK+id);
 deletefeedback(id:string){
   return this.http.delete(DELETE_USER_FEEDBACK+id);
 }
+
+
   private setUserToLocalStorage(user: User) {
     localStorage.setItem(USER_KEY, JSON.stringify(user));
   }
