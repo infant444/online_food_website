@@ -1,7 +1,6 @@
 import { environment } from "src/environment/environment.pord";
 
 const BASE_URL=environment.production?'':'http://localhost:5000';
-
 export const FOOD_URL=BASE_URL+'/api/foods';
 export const FOODTAG_URL=FOOD_URL+'/tag';
 export const FOOD_SEARCH_URL=FOOD_URL+'/search/';
