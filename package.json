@@ -4,6 +4,7 @@
   "engines": {
         "node": ">=18 <19"
     },
+    "author": "Infant",
   "scripts": {
     "start": "cd backend/built && node server.js",
     "prebuild": "cd backend && npm run build",

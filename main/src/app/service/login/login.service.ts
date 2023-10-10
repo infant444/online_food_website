@@ -3,8 +3,9 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
-import { DELETE_USER_FEEDBACK, EMAIL_CHECK_URL, FILTER_FEEDBACK, FORGOT_PASSWORD_MAIL_URL, FORGOT_PASSWORD_URL, LOGIN_URL, OTP_URL, REGISTER, SEE_FEEDBACK, SEE_USER_FEEDBACK, SEND_FEEDBACK, USER_CHANGE_PASSWORD, USER_DELETE, USER_DETAIL, USER_PHOTO, USER_UPLOAD_PHOTO, USER_VERIFY } from 'src/app/data/constent/urls';
+import { DELETE_USER_FEEDBACK, EMAIL_CHECK_URL, FILTER_FEEDBACK, FORGOT_PASSWORD_MAIL_URL, FORGOT_PASSWORD_URL, LOGIN_BACKGROUND, LOGIN_URL, OTP_URL, REGISTER, SEE_FEEDBACK, SEE_USER_FEEDBACK, SEND_FEEDBACK, USER_CHANGE_PASSWORD, USER_DELETE, USER_DETAIL, USER_PHOTO, USER_UPLOAD_PHOTO, USER_VERIFY } from 'src/app/data/constent/urls';
 import { Feedback } from 'src/app/data/feedback/feedback';
+import { Food } from 'src/app/data/food';
 import { IUserLogin } from 'src/app/data/login/Iuserlogin';
 import { Pass } from 'src/app/data/login/changepassword';
 import { Email_OTP } from 'src/app/data/login/email';
@@ -173,5 +174,8 @@ deletefeedback(id:string){
     }
   }
 
+  getback():Observable<Food[]>{
+    return this.http.get<Food[]>(LOGIN_BACKGROUND);
+  }
 
 }

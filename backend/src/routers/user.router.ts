@@ -28,6 +28,13 @@ router.get("/seed",asynceHandler(
          res.send("Seed is Done");
      })
  )
+ router.get("/login/back",asynceHandler(
+    async(req,res)=>{
+        const food=await FoodModel.find();
+        console.log(food);
+        res.send(food);
+    }
+));
 router.post("/login",asynceHandler(
    async (req,res)=>{
         const {email,password}=req.body;
@@ -435,4 +442,8 @@ const verifyuserTocken=(token:string)=>{
             res.send(feedback);
         }
     ))
+
+
+
+
  export default router;
