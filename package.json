@@ -9,7 +9,6 @@
     "start": "cd backend/built && node server.js",
     "prebuild": "cd backend && npm run build",
     "build":"cd main && npm run build"
- 
   },
   "dependencies": {
     "pako": "^2.1.0"
