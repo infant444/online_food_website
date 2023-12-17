@@ -56,7 +56,10 @@
             ],
             "scripts": [
               "node_modules/hammerjs/hammer.min.js"
-            ]
+            ],
+            "allowedCommonJsDependencies": [
+              "lodash"
+           ]
           },
           "configurations": {
             "production": {

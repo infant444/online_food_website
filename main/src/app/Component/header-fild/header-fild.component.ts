@@ -55,26 +55,40 @@ logout(){
 }
 
 login1(){
+  this.menuclass="nav";
+  this.mantname="menu";
 this.rout.navigateByUrl("/login");
 }
 dashbord(){
+  this.menuclass="nav";
+  this.mantname="menu";
   this.rout.navigateByUrl("/dashbord");
 }
 wishlist(){
+  this.menuclass="nav";
+  this.mantname="menu";
 this.rout.navigateByUrl("/wishlist");
 }
 
 cart(){
+  this.menuclass="nav";
+  this.mantname="menu";
 this.rout.navigateByUrl("/cart");
 }
 
 info(){
+  this.menuclass="nav";
+  this.mantname="menu";
   this.rout.navigateByUrl("/info");
   }
   order(){
+  this.menuclass="nav";
+  this.mantname="menu";
     this.rout.navigateByUrl("/order");
     }
     home(){
+  this.menuclass="nav";
+  this.mantname="menu";
     this.rout.navigateByUrl("/");
 
     }

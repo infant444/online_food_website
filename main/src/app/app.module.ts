@@ -66,6 +66,8 @@ import { DirectionMapComponent } from './Component/Admin/direction-map/direction
 import { EmailComponent } from './Component/frogotpassword/email/email.component';
 import { PasswordComponent } from './Component/frogotpassword/password/password.component';
 import { FeedbackComponent } from './Component/Admin/feedback/feedback.component';
+import { RoupayComponent } from './Component/roupay/roupay.component';
+import { RazorpayComponent } from './Component/razorpay/razorpay.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -107,7 +109,9 @@ import { FeedbackComponent } from './Component/Admin/feedback/feedback.component
     DirectionMapComponent,
     EmailComponent,
     PasswordComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    RoupayComponent,
+    RazorpayComponent
   ],
   imports: [
     BrowserModule,

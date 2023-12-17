@@ -1,6 +1,8 @@
-import { environment } from "src/environment/environment";
+import { environment } from "src/environment/environment.pord";
 
 const BASE_URL=environment.production?'':'http://localhost:5000';
+// const BASE_URL='http://localhost:5000';
+
 
 export const FOOD_URL=BASE_URL+'/api/foods';
 export const FOODTAG_URL=FOOD_URL+'/tag';
@@ -46,6 +48,7 @@ export const ORDER_LIST_CHANGE_STATUS=BASE_URL+'/api/order/orderlist/change/stat
 export const ORDER_LIST_DELETE=BASE_URL+'/api/order/orderlist/delete/';
 export const ORDER_TRACK=BASE_URL+'/api/order/track/';
 export const ORDER_PAY_SEND_MAIL=BASE_URL+'/api/order/payment/success/mail/';
+export const LOGIN_BACKGROUND=BASE_URL+'/api/user/login/back';
 
 
 

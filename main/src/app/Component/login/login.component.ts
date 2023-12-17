@@ -2,6 +2,7 @@ import { Component,OnInit} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {LoginService} from '../../service/login/login.service'
 import { ActivatedRoute, Router } from '@angular/router';
+import { Food } from 'src/app/data/food';
 
 @Component({
   selector: 'app-login',
@@ -17,12 +18,20 @@ export class LoginComponent implements OnInit {
   isSubmitted=false;
   returnUrl='';
   siteKey="6LeNmK8mAAAAAEwiJPFaHBIA0oV2Ha_ezvfLc17s";
+  images?:Food[];
 
   constructor(private formbilder:FormBuilder,
     private loginservice:LoginService,
     private activaterouter:ActivatedRoute,
     private router:Router
     ){
+      this.loginservice.getback().subscribe((food)=>{
+  this.images=food.concat(food);
+  this.images=this.images.concat(food);
+  this.images=this.images.concat(food);
+  this.images=this.images.concat(food);
+  console.log(this.images);
+});
 
   }
 ngOnInit(): void {
