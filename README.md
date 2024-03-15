@@ -1,1 +1,1 @@
-This website build with full stack MEAN ,In this website I designed frontend by using Angular framework and backend is using the Node js, express,mongodb. This project is deployed in render the link 'https://siwmato.onrender.com/',In this I integrated the payment gateway.
+This website build with full stack MEAN ,In this website I designed frontend by using Angular framework and backend is using the Node js, express,mongodb. This project is deployed in render the link 'https://siwmato.onrender.com/ ',In this I integrated the payment gateway.
