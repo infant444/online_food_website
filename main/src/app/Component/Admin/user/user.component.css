@@ -2,10 +2,17 @@
 table{
   width: 100%;
   border: 2px solid lightgray ;
+  border-collapse: collapse;
 }
 tr{
   border-bottom: 2px solid lightgray;
   padding: 2px;
+}
+th{
+  text-align: start;
+}
+th:first-child{
+  text-align: center;
 }
 td{
   padding: 5px;

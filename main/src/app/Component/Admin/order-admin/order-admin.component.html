@@ -32,7 +32,7 @@
       <td>{{x.address}}<br>
       lat:{{x.addressLatLag?.lat}},lng:{{x.addressLatLag?.lng}}</td>
       <td>{{x.totalPrice|currency:"INR"}}</td>
-      <td><span *ngIf="x.paymentId">{{x.paymentId}}</span>
+      <td><span *ngIf="x.paymentId" class="blur" [ngClass]="blur? 'clear': ''" (click)="cb()">{{x.paymentId}}</span>
       <span *ngIf="!x.paymentId" style="color: red;">Not payment is done</span></td>
     </tr>
 

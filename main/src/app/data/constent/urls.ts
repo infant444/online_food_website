@@ -1,7 +1,7 @@
 import { environment } from "src/environment/environment.pord";
 
-const BASE_URL=environment.production?'':'http://localhost:5000';
-// const BASE_URL='http://localhost:5000';
+// const BASE_URL=environment.production?'':'http://localhost:5000';
+const BASE_URL='http://localhost:5000';
 
 
 export const FOOD_URL=BASE_URL+'/api/foods';
@@ -33,7 +33,7 @@ export const USER_UPLOAD_PHOTO=BASE_URL+'/api/user/change/profile/upload/';
 export const USER_PHOTO=BASE_URL+'/api/user/change/profile';
 export const FORGOT_PASSWORD_MAIL_URL=BASE_URL+'/api/user/forgotpassword/email';
 export const FORGOT_PASSWORD_URL=BASE_URL+'/api/user/forgotpassword/';
-export const SEND_FEEDBACK=BASE_URL+'/api/user/feedback/sendx';
+export const SEND_FEEDBACK=BASE_URL+'/api/user/feedback/send';
 export const SEE_FEEDBACK=BASE_URL+'/api/user/feedback';
 export const FILTER_FEEDBACK=BASE_URL+'/api/user/feedback/filter';
 export const SEE_USER_FEEDBACK=BASE_URL+'/api/user/userid/';

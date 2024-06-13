@@ -24,7 +24,7 @@ router.post('/create',asynceHandler(
             user:req.user.id,
             status:OrderStatus.NEW
         });
-        
+        console.log(req.user.id);
 
         const newOrder=new OrderModel({...requestOrder,user:req.user.id});
         await newOrder.save();

@@ -12,12 +12,13 @@ export interface Feedback{
 }
 
 const feedbackSchema=new Schema<Feedback>({
-    user:{type:Schema.Types.ObjectId,required:true},
+    user:{type:Schema.Types.ObjectId},
     name:{type:String,required:true},
-    email:{type:String,required:true},
+    email:{type:String},
     rating:{type:String,required:true},
     date:{type:String,required:true},
     issue:{type:String,required:true},
+
 },{
     toJSON:{
         virtuals:true
@@ -29,4 +30,4 @@ const feedbackSchema=new Schema<Feedback>({
 
 })
 
-export const feedbackModel=model<Feedback>("feedback",feedbackSchema);
+export const feedbackModel=model<Feedback>("feedbackx",feedbackSchema);

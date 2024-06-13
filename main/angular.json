@@ -58,7 +58,8 @@
               "node_modules/hammerjs/hammer.min.js"
             ],
             "allowedCommonJsDependencies": [
-              "lodash"
+              "lodash",
+              "leaflet"
            ]
           },
           "configurations": {

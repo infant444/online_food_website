@@ -5,7 +5,7 @@
         <tr>
           <td colspan="8" align="right">
 
-              <button class="add" (click)="add()"><mat-icon class="addicon">add</mat-icon> Add Food</button>
+              <button class="add" (click)="add()"><div class="addicon"><mat-icon>add</mat-icon></div> <div class="addtion_txt">Add Food</div></button>
           </td>
         </tr>
         <tr>
@@ -25,9 +25,9 @@
           <td>{{x.orgins}}</td>
           <td>{{x.rating}}</td>
           <td>{{x.price|currency:'INR'}}</td>
-          <td> <a routerLink="/foodupdate/{{x.id}}" class="edit"><mat-icon>edit</mat-icon></a></td>
+          <td> <a routerLink="/foodupdate/{{x.id}}"><div class="edit btn"><mat-icon>edit</mat-icon></div></a></td>
 
-          <td><a routerLink="/fooddelete/{{x.id}}" class="delete"><mat-icon>delete</mat-icon></a></td>
+          <td><a routerLink="/fooddelete/{{x.id}}"><div class="delete btn"> <mat-icon>delete</mat-icon></div></a></td>
         </tr>
       </table>
 </div>

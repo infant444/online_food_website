@@ -401,12 +401,14 @@ const verifyuserTocken=(token:string)=>{
     }
 }
 
+// router.use(auth);
 
 
     router.post("/feedback/send",asynceHandler(
         async(req,res)=>{
             const response=req.body;
             console.log(response);
+            // await feedbackModel.deleteOne({user: response.user});
             // const feedback:Feedback={
             //     id: '',
             //     name: '',

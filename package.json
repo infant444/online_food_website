@@ -1,6 +1,6 @@
 {
   "name":"Food-delar",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "author": "Infant raj",
   "engines": {
         "node": ">=18 <19"

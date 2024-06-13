@@ -12,6 +12,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./order-admin.component.css']
 })
 export class OrderAdminComponent implements OnInit {
+
     datePipe = new DatePipe('en-US');
     currentDate = new Date();
     dateform!:FormGroup;
@@ -21,6 +22,7 @@ export class OrderAdminComponent implements OnInit {
     status!:string[];
     lat!:any;
     lng!:any;
+    blur:boolean=false;
 
   constructor(private orderservice:OrderService,private formbilder:FormBuilder,private location:LocationService,private tostar:ToastrService){}
 
@@ -68,4 +70,12 @@ changeStatus(x:string,id:string){
   }
 
 }
+cb() {
+  if(this.blur){
+    this.blur=false;
+  }
+  else{
+    this.blur=true;
+  }
+  }
 }

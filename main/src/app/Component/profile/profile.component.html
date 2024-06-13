@@ -1,6 +1,6 @@
 <div class="container">
   <div class="content">
-    <app-title1 title="loginform"></app-title1>
+    <app-title1 title="Profile"></app-title1>
     <form [formGroup]="profile" (ngSubmit)="submit()">
       <input-container lable="Upload food">
         <div class="con">
@@ -11,7 +11,7 @@
             </div>
             <div class="fooddiv2">
               <label for="imageurl">
-                <mat-icon class="uploadimg">cloud_upload</mat-icon>
+                <div class="uploadimg"><mat-icon>cloud_upload</mat-icon></div>
               </label>
               <p *ngIf="!foodimgpath">Browse to choose the file </p>
               <p *ngIf="foodimgpath"><mat-icon

@@ -42,14 +42,7 @@ input[type="file"]{
   display: none;
 }
 
-.fooddiv{
-  width: 90%;
-  height: 300px;
-  margin:  5px auto;
-  background-color: rgb(169, 166, 166);
-  border-radius: 3rem;
-  display: block;
-}
+
 .fooddiv1{
 font-size: 2rem;
 width: 100%;
@@ -81,10 +74,15 @@ label{
   text-align: center;
 }
 .uploadimg{
-  width: 7rem;
-  height: 7rem;
-  font-size: 7rem;
-  margin: 1rem auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.uploadimg mat-icon{
+  font-size: 3rem;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 .button{
   justify-content: center;

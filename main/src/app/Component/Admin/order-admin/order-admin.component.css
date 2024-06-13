@@ -19,6 +19,7 @@ a{
 }
 table{
   width: 100%;
+  border-collapse: collapse;
 }
 tr{
   border-bottom: 2px solid lightgray;
@@ -27,3 +28,14 @@ tr{
 td{
   padding: 5px;
 }
+th{
+  text-align: start;
+}
+.blur{
+  cursor: pointer;
+  filter: blur(2px);
+}
+ .clear{
+  filter: blur(0px);
+
+ }
