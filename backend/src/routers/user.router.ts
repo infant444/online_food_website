@@ -403,9 +403,19 @@ const verifyuserTocken=(token:string)=>{
 
 
 
-    router.post("/feedback/sendx",asynceHandler(
+    router.post("/feedback/send",asynceHandler(
         async(req,res)=>{
             const response=req.body;
+            console.log(response);
+            // const feedback:Feedback={
+            //     id: '',
+            //     name: '',
+            //     email: '',
+            //     rating: '',
+            //     date: '',
+            //     issue: '',
+            //     user: new ObjectId()
+            // }
             const feed=new feedbackModel({...response});
             await feed.save();
             res.send(feed);
