@@ -1,4 +1,5 @@
 import { Component ,Input,OnInit} from '@angular/core';
+import { CartItem } from 'src/app/data/cart/cart';
 import { Order } from 'src/app/data/cart/order';
 
 @Component({
@@ -12,10 +13,14 @@ export class OrderItemListComponent implements OnInit{
 
   @Input()
   order!:Order;
+
+  xy:any[]=[];
   constructor(){
   }
 
 
 ngOnInit(): void {
+  this.xy=this.order.items;
+  this.xy=this.xy.reverse();
 }
 }

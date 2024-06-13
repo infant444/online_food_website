@@ -4,7 +4,7 @@
       <h3>Order <I></I></h3>
     </td>
   </tr>
-  <tr *ngFor="let x of order.items">
+  <tr *ngFor="let x of xy">
     <td class="x">
       <a routerLink="/fooddetail/{{x.food.id}}">
         <img [src]="x.food.imageurl" [alt]="x.food.name" class="img">
@@ -28,7 +28,7 @@
       Total
     </th>
     <th>
-      {{order.totalPrice|currency:'USD'}}
+      {{order.totalPrice|currency:'INR'}}
     </th>
   </tr>
 </table>
