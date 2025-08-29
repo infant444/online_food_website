@@ -33,7 +33,7 @@ export class RoupayComponent implements OnInit {
       currency: 'INR',
       amount: this.order.totalPrice * 100,
       name: this.order.name,
-      key: 'rzp_test_vYk5uom15Fs9iM',
+      key: 'rzp_test_RB2N9XOG5TbC94',
       image: '../../assets/images/food/logo.png',
       handler: (response: any) => {
         // Payment success callback
